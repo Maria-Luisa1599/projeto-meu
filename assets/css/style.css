@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+html, body{
+    max-width: 100%;
+}
+body {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template: 300px 500px 300px/282px;
+}
+
+header {
+}
+main {
+}
+
+div{
+}
+img{
+
+}
+
+img:hover{
+
+}
+
+footer {
+
+}
