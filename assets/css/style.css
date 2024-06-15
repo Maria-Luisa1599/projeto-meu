@@ -1,33 +1,108 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+border: 0;
 }
-html, body{
-    max-width: 100%;
-}
+
 body {
-    background-color: antiquewhite;
-    display: grid;
-    grid-template: 300px 500px 300px/282px;
+display: grid;
+grid-template-rows: 299px 1763px 346px;
+grid-template-areas:
+"header"
+"main"
+"footer";
+max-width: 100%; /* Certifica que o body não ultrapasse a largura da tela */
 }
 
 header {
+grid-area: header;
+background-color: rgb(136, 84, 14);
 }
+
 main {
+grid-area: main;
+max-width: 1080px;
+background-color: rgb(17, 47, 3);
+grid-template-rows: 556px 556px 556px;
+grid-template-columns: "div1" "div2" "div3";
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 div{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 32px;
 }
+
 img{
+max-width: 270px;
+margin: 16px;
 
 }
 
-img:hover{
+.img1{
+grid-area: div1;
+flex-direction: row;
+justify-content: space-evenly;
+}
 
+.img2{
+grid-area: div2;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+.img3{
+grid-area: div3;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+img
+{
+transform: scale(1.1);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+    font-size: 36px; /* Ajuste conforme necessário */
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
 }
 
 footer {
-
+    grid-area: footer;
+    background-color: rgb(14, 71, 136);
+    height: 100%; /* Ajuste conforme necessário */
 }
